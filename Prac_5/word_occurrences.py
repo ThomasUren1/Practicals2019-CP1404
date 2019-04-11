@@ -9,6 +9,7 @@ for i in text_to_count:
         count = len([j for j in text_to_count if (j == i)])
         count_of_words[i] = count
 
-max_length = len(max(text_to_count, key=len))
+print(max(text_to_count))
+max_length = len(max(text_to_count, key=len))  # max(len(text_to_count)) also works.
 print('{}: {}'.format('Text', text))
 [print("{:{}} : {}".format(name, max_length, count_of_words[name])) for name in sorted(count_of_words)]
